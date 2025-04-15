@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nomad — Coming Soon</title>
+  <title>Nomad</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -164,20 +164,46 @@
 }
 
 #navbar.visible {
-  opacity: 1;
+  opacity: 2;
   transform: translateY(0);
+  background-color: #000;
 }
 
 .nav-logo {
-  height: 170px;
+  height: 65px;             /* Make it larger */
   width: auto;
+  object-fit: contain;
 }
+
+@media (max-width: 768px) {
+  footer {
+    height: auto; /* Let the height adjust based on content */
+    padding: 20px 0; /* Ensure the footer has some padding */
+  }
+
+  .social-icons {
+    justify-content: center; /* Center the social icons */
+    margin-bottom: 15px; /* Add more space between icons and text */
+  }
+
+  .social-icons a {
+    font-size: 1.2rem; /* Make the icons smaller on mobile */
+  }
+
+  .footer-text {
+    position: static; /* Allow the footer text to flow below the social icons */
+    text-align: center; /* Center align the footer text */
+    margin-top: 10px; /* Add space between the icons and text */
+    font-size: 0.85rem; /* Slightly smaller font for mobile */
+  }
+}
+
 
   </style>
 </head>
 <body>
   <nav id="navbar">
-    <img src="NomadLogo.PNG" alt="Nomad Logo" class="nav-logo">
+    <img src="Logo.PNG" alt="Nomad Logo" class="nav-logo">
   </nav>
   <section id="intro">
     <img src="NomadLogo.PNG" alt="Nomad Logo" class="logo">
