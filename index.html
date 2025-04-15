@@ -20,7 +20,7 @@
     }
 
     section {
-      height: 100vh;
+      min-height: 100vh;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -44,14 +44,14 @@
       margin-bottom: 1.5rem;
     }
 
+    h1 {
+      font-size: 28px;
+    }
+
     p {
       font-size: 1.4rem;
       color: #ffffff;
       max-width: 600px;
-    }
-
-    h1 {
-      font-size: 28px;
     }
 
     .email-signup {
@@ -86,6 +86,27 @@
       background-color: #333;
     }
 
+    .product-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 40px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .product-gallery img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .product-gallery img:hover {
+      transform: scale(1.03);
+    }
+
     footer {
       height: 100vh;
       display: flex;
@@ -106,6 +127,15 @@
     <h1>Track Smarter. Move Freely.</h1>
     <br>
     <p>Nomad is reimagining logistics with real-time tracking, machine learning, and adaptive systems designed for the modern world.</p>
+  </section>
+
+  <!-- 🖼 Product Images Section -->
+  <section id="products">
+    <h1>Track With Confidence.</h1>
+    <br>
+    <div class="product-gallery">
+      <img src="productexample.jpg" alt="Nomad Preview">
+    </div>
   </section>
 
   <section id="signup">
