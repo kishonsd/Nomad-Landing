@@ -98,7 +98,11 @@
 
     .product-gallery img {
       max-width: 100%;
+      width: 60%;
       height: auto;
+      margin: 0;
+      padding: 0;
+      align-items: stretch;
       border-radius: 16px;
       box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
       transition: transform 0.3s ease;
@@ -178,7 +182,7 @@
 @media (max-width: 768px) {
   footer {
     height: auto; /* Let the height adjust based on content */
-    padding: 20px 0; /* Ensure the footer has some padding */
+    padding: 0px 0; /* Ensure the footer has some padding */
   }
 
   .social-icons {
@@ -195,6 +199,19 @@
     text-align: center; /* Center align the footer text */
     margin-top: 10px; /* Add space between the icons and text */
     font-size: 0.85rem; /* Slightly smaller font for mobile */
+  }
+
+  .product-gallery {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .product-gallery img {
+    width: 100vw;              /* full width of the viewport */
+    margin-left: calc(-50vw + 50%); /* centers the image by offsetting it */
+    border-radius: 0;          /* optional: square corners for edge-to-edge look */
+    max-width: none;           /* prevent max-width from limiting it */
   }
 }
 
