@@ -115,10 +115,39 @@
       font-size: 0.95rem;
       color: #999;
     }
+
+    #navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 999;
+}
+
+#navbar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-logo {
+  height: 170px;
+  width: auto;
+}
+
   </style>
 </head>
 <body>
-
+  <nav id="navbar">
+    <img src="NomadLogo.PNG" alt="Nomad Logo" class="nav-logo">
+  </nav>
   <section id="intro">
     <img src="NomadLogo.PNG" alt="Nomad Logo" class="logo">
   </section>
@@ -153,7 +182,8 @@
 
   <script>
     const sections = document.querySelectorAll("section, footer");
-
+    const navbar = document.getElementById("navbar");
+  
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -163,8 +193,17 @@
     }, {
       threshold: 0.25
     });
-
+  
     sections.forEach(section => observer.observe(section));
+  
+    // 👇 Add this scroll listener to show/hide the navbar
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight * 0.6) {
+        navbar.classList.add('visible');
+      } else {
+        navbar.classList.remove('visible');
+      }
+    });
   </script>
 </body>
 </html>
