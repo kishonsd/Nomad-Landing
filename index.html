@@ -257,37 +257,33 @@
   }
 
   .hero-banner {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  position: relative;
+  height: 60vh; /* Reduce overall hero height */
+  overflow: hidden;
+  background-color: black;
+}
 
-  .background-video {
+
+.background-video {
   position: absolute;
-  top: 50%;                 /* center vertically */
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 60%;              /* reduce video height */
+  height: 100%;
   object-fit: cover;
   opacity: 0.3;
   z-index: 1;
 }
 
+.logo-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Center it inside the reduced banner */
+}
 
-  .logo-overlay {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
 
   .logo {
     max-width: 260px;
