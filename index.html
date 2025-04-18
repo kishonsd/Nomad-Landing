@@ -181,35 +181,37 @@
 
 .hero-banner {
   position: relative;
-  height: 100vh; /* full height of viewport */
+  height: 10vh; /* This reduces the hero section height */
   width: 100%;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: black;
 }
-
-
 
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.3; /* Adjust video visibility */
+  opacity: 0.3;
   z-index: 1;
 }
 
 .logo-overlay {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  text-align: center;
 }
+
+.hero-logo {
+  max-width: 80%;
+  height: auto;
+}
+
 
 
 .logo {
@@ -257,39 +259,7 @@
   }
 
   .hero-banner {
-  position: relative;
-  height: 40vh; /* Reduce overall hero height */
-  overflow: hidden;
-  background-color: black;
-}
-
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  z-index: 1;
-}
-
-.logo-overlay {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Center it inside the reduced banner */
-}
-
-
-  .logo {
-    max-width: 260px;
-    height: auto;
-    opacity: 0.95;
-    margin-top: 0; /* Remove any vertical offset */
+    height: 40vh; /* or 30vh, depending on how short you want it */
   }
 }
 
@@ -300,15 +270,17 @@
   <nav id="navbar">
     <img src="Logo.PNG" alt="Nomad Logo" class="nav-logo">
   </nav>
-  <section id="intro" class="hero-banner">
-    <div class="logo-overlay">
-      <img src="transparent_logo.png" alt="Nomad Logo" class="logo">
-    </div>
-    <video autoplay loop muted playsinline class="background-video">
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </section>
+  <!-- HERO SECTION -->
+<section class="hero-banner">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="logo-overlay">
+    <img src="transparent_logo.png" alt="Nomad Logo" class="hero-logo">
+  </div>
+</section>
+
   <section id="message">
     <h1>Modern Operational Intelligence</h1>
     <br>
