@@ -198,7 +198,7 @@
   width: 100%;
   height: 80%;
   object-fit: cover;
-  opacity: 0.3; /* Adjust video visibility */
+  opacity: 0.4; /* Adjust video visibility */
   z-index: 1;
 }
 
@@ -223,24 +223,24 @@
 
 @media (max-width: 768px) {
   footer {
-    height: auto; /* Let the height adjust based on content */
-    padding: 0px 0; /* Ensure the footer has some padding */
+    height: auto;
+    padding: 0px 0;
   }
 
   .social-icons {
-    justify-content: center; /* Center the social icons */
-    margin-bottom: 15px; /* Add more space between icons and text */
+    justify-content: center;
+    margin-bottom: 15px;
   }
 
   .social-icons a {
-    font-size: 1.2rem; /* Make the icons smaller on mobile */
+    font-size: 1.2rem;
   }
 
   .footer-text {
-    position: static; /* Allow the footer text to flow below the social icons */
-    text-align: center; /* Center align the footer text */
-    margin-top: 10px; /* Add space between the icons and text */
-    font-size: 0.85rem; /* Slightly smaller font for mobile */
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.85rem;
   }
 
   .product-gallery {
@@ -251,47 +251,47 @@
   }
 
   .product-gallery img {
-    width: 97vw;              /* full width of the viewport */
-    border-radius: 0;          /* optional: square corners for edge-to-edge look */
-    max-width: none;           /* prevent max-width from limiting it */
+    width: 97vw;
+    border-radius: 0;
+    max-width: none;
   }
 
   .hero-banner {
-  position: relative;
-  height: 20vh; /* Adjust this to the desired video height */
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    position: relative;
+    height: 70vh; /* more vertical space for logo and video */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  opacity: 0.2; /* Adjust video visibility */
-  z-index: 1;
-}
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* fill the banner fully */
+    object-fit: cover;
+    opacity: 0.4;
+    z-index: 1;
+  }
 
-.logo-overlay {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .logo-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
-.logo {
-  max-width: 300px;
-  height: 50%;
-  opacity: 0.95; /* Optional: make logo semi-transparent if desired */;
-}
-
-
+  .logo {
+    max-width: 260px;
+    height: auto;
+    opacity: 0.95;
+    margin-top: -40px; /* slight upward nudge on mobile */
+  }
 }
 
 
