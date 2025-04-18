@@ -179,6 +179,14 @@
   object-fit: contain;
 }
 
+.background-video {
+  height: 70%;
+  width: 60%;
+  max-width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
 @media (max-width: 768px) {
   footer {
     height: auto; /* Let the height adjust based on content */
@@ -213,6 +221,43 @@
     border-radius: 0;          /* optional: square corners for edge-to-edge look */
     max-width: none;           /* prevent max-width from limiting it */
   }
+
+  .hero-banner {
+  position: relative;
+  height: 60vh; /* Adjust this to the desired video height */
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2; /* Adjust video visibility */
+  z-index: 1;
+}
+
+.logo-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 300px;
+  height: auto;
+  opacity: 0.95; /* Optional: make logo semi-transparent if desired */
+}
+
+
 }
 
 
@@ -222,10 +267,15 @@
   <nav id="navbar">
     <img src="Logo.PNG" alt="Nomad Logo" class="nav-logo">
   </nav>
-  <section id="intro">
-    <img src="NomadLogo_cropped.png" alt="Nomad Logo" class="logo">
+  <section id="intro" class="hero-banner">
+    <div class="logo-overlay">
+      <img src="NomadLogo_cropped.png" alt="Nomad Logo" class="logo">
+    </div>
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </section>
-
   <section id="message">
     <h1>Track Smarter. Move Freely.</h1>
     <br>
@@ -244,10 +294,10 @@
   </section>
 
   <section id="signup">
-    <p>Want to be the first to know when we launch?</p>
+    <p>Want a live demo?</p>
     <form class="email-signup" action="https://formspree.io/f/mzzewoyg" method="POST">
       <input type="email" name="email" placeholder="Your email" required>
-      <button type="submit">Notify Me</button>
+      <button type="submit">Request</button>
     </form>
   </section>
 
